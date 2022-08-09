@@ -1,0 +1,133 @@
+﻿<Application x:Class="Secretary.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="using:Microsoft.UI.Xaml.Controls"
+             xmlns:local="clr-namespace:Secretary"
+             xmlns:viewmodels="clr-namespace:Secretary.ViewModel"
+             xmlns:viewmodel="clr-namespace:Secretary"
+             xmlns:view="clr-namespace:Secretary.View"
+             StartupUri="LogInWindow.xaml">
+    <Application.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles/SignInButtonStyle.xaml"/>
+                <ResourceDictionary Source="Styles/GroupBoxTheme.xaml"/>
+                <ResourceDictionary Source="Styles/GroupBoxTheme2.xaml"/>
+                <ResourceDictionary Source="Styles/MenuButtonsTheme.xaml"/>
+                <ResourceDictionary Source="Styles/SearchTheme.xaml"/>
+                <ResourceDictionary Source="Styles/SearchRecordsTheme.xaml"/>
+                <ResourceDictionary Source="Styles/DataGridUsersTheme.xaml"/>
+                <ResourceDictionary Source="Styles/DataGridRowTheme.xaml"/>
+                <ResourceDictionary Source="Styles/MovementAnimation.xaml"/>
+                <ResourceDictionary Source="Styles/GroupBoxTheme3.xaml"/>
+                <ResourceDictionary Source="Styles/HomePageButtons.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewmodels:CRUDAccountOptionsViewModel}">
+                <viewmodel:CRUDAccountOptions/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:CRUDMedicalRecordViewModel}">
+                <view:CRUDMedicalRecord/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:AccountsViewModel}">
+                <view:AccountsView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:AddAccountViewModel}">
+                <view:AddAccount/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:EditAccountViewModel}">
+                <view:EditAccount/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:MedicalRecordsViewModel}">
+                <view:MedicalRecordsView/>
+            </DataTemplate>
+            
+            <DataTemplate DataType="{x:Type viewmodels:EditMedicalRecordViewModel}">
+                <view:EditMedicalRecord/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:AddMedicalRecordViewModel}">
+                <view:AddMedicalRecord/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:EmergencyGeneralViewModel}">
+                <view:EmergencyView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:EmergencyViewModel}">
+                <view:CreateEmergencyView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:CreateGuestViewModel}">
+                <view:CreateGuestView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:RequestsViewModel}">
+                <view:RequestView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:OrderDynamicEquipmentViewModel}">
+                <view:TabEquipmentView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:FreeDaysRequestViewModel}">
+                <view:TabRequestView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:EquipmentViewModel}">
+                <view:EquipmentView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:GraphicViewModel}">
+                <view:StorageGraphView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:BookViewModel}">
+                <view:BookView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:AddMeetingViewModel}">
+                <view:AddMeetingView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:AddAppointmentViewModel}">
+                <view:AddAppointmentView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:HomeViewModel}">
+                <view:HomeView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:HomePageViewModel}">
+                <view:HomePage/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:HomePageMeetingsViewModel}">
+                <view:HomePageMeetings/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:EditAppointmentViewModel}">
+                <view:EditAppointmentView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:EditMeetingViewModel}">
+                <view:EditMeetingView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:RoomOccupancyReportViewModel}">
+                <view:ReportView/>
+            </DataTemplate>
+
+            <DataTemplate DataType="{x:Type viewmodels:NotificationViewModel}">
+                <view:NotificationsView/>
+            </DataTemplate>
+            
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

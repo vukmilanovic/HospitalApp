@@ -1,0 +1,69 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Database\**" />
+    <EmbeddedResource Remove="Database\**" />
+    <None Remove="Database\**" />
+    <Page Remove="Database\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\back-16.png" />
+    <None Remove="Icons\biotech-16.png" />
+    <None Remove="Icons\buy-16.png" />
+    <None Remove="Icons\demo-16.png" />
+    <None Remove="Icons\demow-16.png" />
+    <None Remove="Icons\export-pdf-16.png" />
+    <None Remove="Icons\great-britain-16.png" />
+    <None Remove="Icons\great-britain-26.png" />
+    <None Remove="Icons\health-data-16.png" />
+    <None Remove="Icons\help-16.png" />
+    <None Remove="Icons\home-16.png" />
+    <None Remove="Icons\logout-16.png" />
+    <None Remove="Icons\pill-16.png" />
+    <None Remove="Icons\pill-24.png" />
+    <None Remove="Icons\question-mark-16.png" />
+    <None Remove="Icons\remove-16.png" />
+    <None Remove="Icons\repeat-16.png" />
+    <None Remove="Icons\search-16.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HospitalMain\HospitalMain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\back-16.png" />
+    <Resource Include="Icons\biotech-16.png" />
+    <Resource Include="Icons\buy-16.png" />
+    <Resource Include="Icons\demow-16.png" />
+    <Resource Include="Icons\export-pdf-16.png" />
+    <Resource Include="Icons\great-britain-16.png" />
+    <Resource Include="Icons\health-data-16.png" />
+    <Resource Include="Icons\help-16.png" />
+    <Resource Include="Icons\home-16.png" />
+    <Resource Include="Icons\logout-16.png" />
+    <Resource Include="Icons\pill-16.png" />
+    <Resource Include="Icons\question-mark-16.png" />
+    <Resource Include="Icons\remove-16.png" />
+    <Resource Include="Icons\repeat-16.png" />
+    <Resource Include="Icons\search-16.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Syncfusion.Licensing" Version="20.1.0.59" />
+    <PackageReference Include="Syncfusion.Pdf.Wpf" Version="20.1.0.59" />
+    <PackageReference Include="Syncfusion.PdfViewer.WPF" Version="20.1.0.59" />
+    <PackageReference Include="Syncfusion.SfChart.WPF" Version="20.1.0.59" />
+    <PackageReference Include="Syncfusion.SfScheduler.WPF" Version="20.1.0.59" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>

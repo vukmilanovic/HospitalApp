@@ -1,0 +1,63 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\exams.png" />
+    <None Remove="Images\help.png" />
+    <None Remove="Images\logout.png" />
+    <None Remove="Images\notifications.png" />
+    <None Remove="Images\patients.png" />
+    <None Remove="Images\requests.png" />
+    <None Remove="Images\schedule.png" />
+    <None Remove="Images\verification.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\exams.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\help.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\logout.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\notifications.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\patients.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\requests.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\schedule.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Images\verification.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PDFsharp" Version="1.50.5147" />
+    <PackageReference Include="Extended.Wpf.Toolkit" Version="4.3.0" />
+    <PackageReference Include="Syncfusion.Licensing" Version="20.1.0.59" />
+    <PackageReference Include="Syncfusion.Pdf.Wpf" Version="20.1.0.59" />
+    <PackageReference Include="Syncfusion.PdfViewer.WPF" Version="20.1.0.59" />
+    <PackageReference Include="Syncfusion.SfChart.WPF" Version="20.1.0.59" />
+    <PackageReference Include="Syncfusion.SfScheduler.WPF" Version="20.1.0.59" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HospitalMain\HospitalMain.csproj" />
+    <ProjectReference Include="..\Secretary\Secretary.csproj" />
+  </ItemGroup>
+
+</Project>

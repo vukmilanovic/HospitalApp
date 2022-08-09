@@ -1,0 +1,48 @@
+﻿<Page x:Class="Doctor.View.ReportPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Doctor.View" 
+      mc:Ignorable="d" 
+      d:DesignHeight="692" d:DesignWidth="710"
+      Title="Report">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Canvas Grid.Row="0" Background="#FF437182" HorizontalAlignment="Center" Height="75" VerticalAlignment="Top" Width="710" Margin="0,-15,0,0">
+            <TextBlock Style="{StaticResource TitleTextBlock}" HorizontalAlignment="Left" Canvas.Left="93" Canvas.Top="12" VerticalAlignment="Center" >UNESI PODATKE O PREGLEDU</TextBlock>
+        </Canvas>
+        <Grid Grid.Row="1" Margin="0,41,0,151">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <TextBlock FontWeight="Bold" Grid.Row="0" Foreground="Black" Margin="20,0,595,82" >Pacijent:</TextBlock>
+            <TextBlock Grid.Row="0" Foreground="Black" Margin="120,0,247,82" Text="{Binding PatientBind}" ></TextBlock>
+            <TextBlock FontWeight="Bold" Foreground="Black" Margin="20,39,424,48">Datum i vreme pregleda:</TextBlock>
+            <TextBlock Grid.Row="0" Foreground="Black" Margin="300,39,134,48" Text="{Binding DateBind}"></TextBlock>
+        </Grid>
+        <TextBox Name="textBoxDescription" HorizontalAlignment="Left" Margin="20,126,0,0" FontSize="22" Grid.Row="1" TextWrapping="Wrap" Text="Unesi izvestaj sa pregleda..."  GotKeyboardFocus="TextBox_GotKeyboardFocus" VerticalAlignment="Top" Width="665" Height="149"/>
+        <TextBlock FontWeight="Bold" HorizontalAlignment="Left" Margin="20,0,0,0" Grid.Row="3" TextWrapping="Wrap" Text="Terapija:" VerticalAlignment="Center" Width="95"/>
+        <DataGrid Name ="dataGridTherapy" ItemsSource="{Binding therapyBind, Mode=TwoWay}" IsReadOnly="True" SelectionMode="Single" AutoGenerateColumns="False" Grid.Row="4" Margin="20,10,202,90">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Lek" Binding="{Binding Medicine}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Trajanje(dana)" Binding="{Binding Duration}" Width="2*"></DataGridTextColumn>
+                <DataGridTextColumn Header="Dnevno" Binding="{Binding PerDay}" Width="*"></DataGridTextColumn>
+                <DataGridCheckBoxColumn Header="Recept" Binding="{Binding Prescription}" Width="*">
+                </DataGridCheckBoxColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name ="add" Content="Dodaj lek" HorizontalAlignment="Left" Margin="532,10,0,0" Grid.Row="4" VerticalAlignment="Top" Template="{StaticResource BasicButton}" Height="49" Width="168" Click="add_Click"/>
+        <Button Grid.Row="4" Name="SaveReport" Content="Prosledi" Template="{StaticResource BasicButton}" HorizontalAlignment="Right" VerticalAlignment="Top" Width="200" Click="SaveReport_Click" Height="42" Margin="0,220,0,0"/>
+        <Button Grid.Row="4" Name="AddReferral" Content="Izdaj uput" Template="{StaticResource BasicButton}" HorizontalAlignment="Left" Margin="60,206,0,-13" Click="AddReferral_Click"/>
+        <Button Grid.Row="4" Name="AddExcuses" Content="Izdaj opravdanje" Template="{StaticResource BasicButton}" HorizontalAlignment="Center" Margin="0,206,0,-13" Click="AddExcuses_Click" Width="163"/>
+    </Grid>
+</Page>
